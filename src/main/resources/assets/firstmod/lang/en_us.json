@@ -1,4 +1,7 @@
 {
   "item.firstmod.sacrite": "Sacrite Gem",
-  "item.firstmod.raw_sacrite": "Raw Sacrite"
+  "item.firstmod.raw_sacrite": "Raw Sacrite",
+
+  "block.firstmod.sacrite_block": "Block of Sacrite",
+  "block.firstmod.sacrite_ore": "Sacrite Ore"
 }

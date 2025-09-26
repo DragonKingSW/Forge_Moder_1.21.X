@@ -52,6 +52,8 @@ public class FirstMod {
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.SACRITE_BLOCK);
+            event.accept(ModBlocks.SACRITE_ORE);
+            event.accept(ModBlocks.DEEPSLATE_SACRITE_ORE);
         }
     }
 
