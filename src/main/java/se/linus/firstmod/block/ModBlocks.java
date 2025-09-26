@@ -1,6 +1,8 @@
 package se.linus.firstmod.block;
 
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import se.linus.firstmod.FirstMod;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
@@ -20,15 +22,24 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SACRITE_BLOCK = registerBlock("sacrite_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
 
     public static final RegistryObject<Block> SACRITE_ORE = registerBlock("sacrite_ore",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DEEPSLATE_SACRITE_ORE = registerBlock("deepslate_sacrite_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3,5), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<Block> INFLAMITE_ORE = registerBlock("inflamite_ore",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> DEEPSLATE_INFLAMITE_ORE = registerBlock("deepslate_inflamite_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
 
     private static  <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

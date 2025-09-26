@@ -2,6 +2,14 @@
   "item.firstmod.sacrite": "Sacrite Gem",
   "item.firstmod.raw_sacrite": "Raw Sacrite",
 
+  "item.firstmod.inflamite": "Inflamite",
+
   "block.firstmod.sacrite_block": "Block of Sacrite",
-  "block.firstmod.sacrite_ore": "Sacrite Ore"
+  "block.firstmod.sacrite_ore": "Sacrite Ore",
+  "block.firstmod.deepslate_sacrite_ore": "Deepslate Sacrite Ore",
+
+  "block.firstmod.inflamite_ore": "Inflamite Ore",
+  "block.firstmod.deepslate_inflamite_ore": "Deepslate Inflamite Ore",
+
+  "creativetab.firstmod": "First Mod"
 }
