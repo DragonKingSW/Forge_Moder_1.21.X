@@ -26,21 +26,11 @@
                   }
                 }
               ],
-              "name": "firstmod:sacrite_ore"
+              "name": "firstmod:inflamite_ore"
             },
-
             {
               "type": "minecraft:item",
               "functions": [
-                {
-                  "add": false,
-                  "count": {
-                    "type": "minecraft:uniform",
-                    "max": 5.0,
-                    "min": 3.0
-                  },
-                  "function": "minecraft:set_count"
-                },
                 {
                   "enchantment": "minecraft:fortune",
                   "formula": "minecraft:ore_drops",
@@ -50,7 +40,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "firstmod:raw_sacrite"
+              "name": "firstmod:inflamite"
             }
           ]
         }
@@ -58,5 +48,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "firstmod:blocks/sacrite_ore"
+  "random_sequence": "firstmod:blocks/inflamite_ore"
 }

@@ -26,7 +26,7 @@
                   }
                 }
               ],
-              "name": "firstmod:sacrite_ore"
+              "name": "firstmod:deepslate_inflamite_ore"
             },
             {
               "type": "minecraft:item",
@@ -40,7 +40,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "firstmod:raw_sacrite"
+              "name": "firstmod:inflamite"
             }
           ]
         }
@@ -48,5 +48,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "firstmod:blocks/sacrite_ore"
+  "random_sequence": "firstmod:blocks/deepslate_inflamite_ore"
 }
