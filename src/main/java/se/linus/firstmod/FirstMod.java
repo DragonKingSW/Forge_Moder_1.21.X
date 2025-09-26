@@ -51,12 +51,15 @@ public class FirstMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.SACRITE);
             event.accept(ModItems.RAW_SACRITE);
+            event.accept(ModItems.INFLAMITE);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.SACRITE_BLOCK);
             event.accept(ModBlocks.SACRITE_ORE);
             event.accept(ModBlocks.DEEPSLATE_SACRITE_ORE);
+            event.accept(ModBlocks.INFLAMITE_ORE);
+            event.accept(ModBlocks.DEEPSLATE_INFLAMITE_ORE);
         }
     }
 
