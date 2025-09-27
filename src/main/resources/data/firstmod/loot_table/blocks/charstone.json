@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "firstmod:sacrite_block"
+          "name": "firstmod:charstone"
         }
       ],
       "rolls": 1.0
