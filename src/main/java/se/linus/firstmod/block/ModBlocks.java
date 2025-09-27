@@ -12,6 +12,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import se.linus.firstmod.block.custom.CharstoneBlock;
 import se.linus.firstmod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -23,11 +24,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> SACRITE_BLOCK = registerBlock("sacrite_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
-
     public static final RegistryObject<Block> SACRITE_ORE = registerBlock("sacrite_ore",
             () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops()));
-
     public static final RegistryObject<Block> DEEPSLATE_SACRITE_ORE = registerBlock("deepslate_sacrite_ore",
             () -> new DropExperienceBlock(UniformInt.of(3,5), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
@@ -36,14 +35,16 @@ public class ModBlocks {
     public static final RegistryObject<Block> INFLAMITE_ORE = registerBlock("inflamite_ore",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops()));
-
     public static final RegistryObject<Block> DEEPSLATE_INFLAMITE_ORE = registerBlock("deepslate_inflamite_ore",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
-
     public static final RegistryObject<Block> FIREBARK_BLOCK = registerBlock("firebark_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(1f).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CHARSTONE = registerBlock("charstone",
+            () -> new CharstoneBlock(BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
 
 
     private static  <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

@@ -33,6 +33,8 @@ public class ModCreativeModeTabs {
                        output.accept(ModBlocks.DEEPSLATE_INFLAMITE_ORE.get());
                        output.accept(ModBlocks.FIREBARK_BLOCK.get());
 
+                       output.accept(ModBlocks.CHARSTONE.get());
+
                     }).build());
 
     public static void register(IEventBus eventBus) {
