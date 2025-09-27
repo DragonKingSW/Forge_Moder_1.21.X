@@ -12,6 +12,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import se.linus.firstmod.block.ModBlocks;
 
 import java.util.Map;
 
@@ -19,14 +20,14 @@ import java.util.Map;
 public class FlameWandItem extends Item {
     private static final Map<Block, Block> FLAME_MAP =
             Map.of(
-                    Blocks.OAK_LOG, Blocks.COAL_BLOCK,
-                    Blocks.ACACIA_LOG, Blocks.COAL_BLOCK,
-                    Blocks.BIRCH_LOG, Blocks.COAL_BLOCK,
-                    Blocks.CHERRY_LOG, Blocks.COAL_BLOCK,
-                    Blocks.DARK_OAK_LOG, Blocks.COAL_BLOCK,
-                    Blocks.JUNGLE_LOG, Blocks.COAL_BLOCK,
-                    Blocks.MANGROVE_LOG, Blocks.COAL_BLOCK,
-                    Blocks.SPRUCE_LOG, Blocks.COAL_BLOCK
+                    Blocks.OAK_LOG, ModBlocks.FIREBARK_BLOCK.get(),
+                    Blocks.ACACIA_LOG, ModBlocks.FIREBARK_BLOCK.get(),
+                    Blocks.BIRCH_LOG, ModBlocks.FIREBARK_BLOCK.get(),
+                    Blocks.CHERRY_LOG, ModBlocks.FIREBARK_BLOCK.get(),
+                    Blocks.DARK_OAK_LOG, ModBlocks.FIREBARK_BLOCK.get(),
+                    Blocks.JUNGLE_LOG, ModBlocks.FIREBARK_BLOCK.get(),
+                    Blocks.MANGROVE_LOG, ModBlocks.FIREBARK_BLOCK.get(),
+                    Blocks.SPRUCE_LOG, ModBlocks.FIREBARK_BLOCK.get()
             );
 
     public FlameWandItem(Properties pProperties) {

@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
 
                        output.accept(ModItems.INFLAMITE.get());
                        output.accept(ModItems.FLAME_WAND.get());
+                       output.accept(ModItems.FIREBARK.get());
 
                        output.accept(ModBlocks.SACRITE_BLOCK.get());
                        output.accept(ModBlocks.SACRITE_ORE.get());
@@ -30,6 +31,7 @@ public class ModCreativeModeTabs {
 
                        output.accept(ModBlocks.INFLAMITE_ORE.get());
                        output.accept(ModBlocks.DEEPSLATE_INFLAMITE_ORE.get());
+                       output.accept(ModBlocks.FIREBARK_BLOCK.get());
 
                     }).build());
 

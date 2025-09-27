@@ -4,6 +4,7 @@
 
   "item.firstmod.inflamite": "Inflamite",
   "item.firstmod.flame_wand": "Flame Wand",
+  "item.firstmod.firebark": "Firebark",
 
   "block.firstmod.sacrite_block": "Block of Sacrite",
   "block.firstmod.sacrite_ore": "Sacrite Ore",
@@ -11,6 +12,7 @@
 
   "block.firstmod.inflamite_ore": "Inflamite Ore",
   "block.firstmod.deepslate_inflamite_ore": "Deepslate Inflamite Ore",
+  "block.firstmod.firebark_block": "Firebark Block",
 
   "creativetab.firstmod": "First Mod"
 }

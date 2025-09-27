@@ -32,6 +32,7 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(3,5), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
+
     public static final RegistryObject<Block> INFLAMITE_ORE = registerBlock("inflamite_ore",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops()));
@@ -39,6 +40,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEEPSLATE_INFLAMITE_ORE = registerBlock("deepslate_inflamite_ore",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<Block> FIREBARK_BLOCK = registerBlock("firebark_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(1f).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
 
 
     private static  <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
