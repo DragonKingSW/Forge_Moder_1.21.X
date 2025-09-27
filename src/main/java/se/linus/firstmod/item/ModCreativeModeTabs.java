@@ -20,10 +20,14 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                        output.accept(ModItems.SACRITE.get());
                        output.accept(ModItems.RAW_SACRITE.get());
+
                        output.accept(ModItems.INFLAMITE.get());
+                       output.accept(ModItems.FLAME_WAND.get());
+
                        output.accept(ModBlocks.SACRITE_BLOCK.get());
                        output.accept(ModBlocks.SACRITE_ORE.get());
                        output.accept(ModBlocks.DEEPSLATE_SACRITE_ORE.get());
+
                        output.accept(ModBlocks.INFLAMITE_ORE.get());
                        output.accept(ModBlocks.DEEPSLATE_INFLAMITE_ORE.get());
 
