@@ -25,6 +25,8 @@ public class ModCreativeModeTabs {
                        output.accept(ModItems.FLAME_WAND.get());
                        output.accept(ModItems.FIREBARK.get());
 
+                       output.accept(ModItems.CHARRED_FLESH.get());
+
                        output.accept(ModBlocks.SACRITE_BLOCK.get());
                        output.accept(ModBlocks.SACRITE_ORE.get());
                        output.accept(ModBlocks.DEEPSLATE_SACRITE_ORE.get());

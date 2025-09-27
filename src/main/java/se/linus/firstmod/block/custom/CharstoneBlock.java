@@ -37,6 +37,8 @@ public class CharstoneBlock extends Block {
                         pLevel.addFreshEntity(leftoverEntity);
                     }
                 }
+            } else if (itemEntity.getItem().getItem() == Items.ROTTEN_FLESH) {
+                itemEntity.setItem(new ItemStack(ModItems.CHARRED_FLESH.get(), itemEntity.getItem().getCount()));
             }
         }
 

@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import se.linus.firstmod.item.custom.FlameWandItem;
+import se.linus.firstmod.item.custom.FuelItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -22,7 +23,10 @@ public class ModItems {
     public static final RegistryObject<Item> FLAME_WAND = ITEMS.register("flame_wand",
             () -> new FlameWandItem(new Item.Properties().durability(32)));
     public static final RegistryObject<Item> FIREBARK = ITEMS.register("firebark",
-            () -> new Item(new Item.Properties()));
+            () -> new FuelItem(new Item.Properties(), 10));
+
+    public static final RegistryObject<Item> CHARRED_FLESH = ITEMS.register("charred_flesh",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.CHARRED_FLESH)));
 
     public static void  register(IEventBus eventBus) {
         ITEMS.register(eventBus);
