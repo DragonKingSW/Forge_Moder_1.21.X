@@ -31,6 +31,8 @@
   "block.firstmod.sacrite_door": "Sacrite Door",
   "block.firstmod.sacrite_trapdoor": "Sacrite Trapdoor",
 
+  "block.firstmod.sacrite_lamp": "Sacrite Lamp",
+
   "tooltip.firstmod.charstone.tooltip": "This Block §cCHARRS§r stuff",
 
   "tooltip.firstmod.flame_wand.shift_down": "Use to §cBurn Blocks§r",

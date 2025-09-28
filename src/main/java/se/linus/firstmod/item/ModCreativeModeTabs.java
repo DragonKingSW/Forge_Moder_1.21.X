@@ -44,6 +44,8 @@ public class ModCreativeModeTabs {
                        output.accept(ModBlocks.SACRITE_DOOR.get());
                        output.accept(ModBlocks.SACRITE_TRAPDOOR.get());
 
+                       output.accept(ModBlocks.SACRITE_LAMP.get());
+
                        output.accept(ModBlocks.INFLAMITE_ORE.get());
                        output.accept(ModBlocks.DEEPSLATE_INFLAMITE_ORE.get());
                        output.accept(ModBlocks.FIREBARK_BLOCK.get());

@@ -1,6 +1,8 @@
 package se.linus.firstmod.datagen;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -9,6 +11,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import se.linus.firstmod.block.ModBlocks;
+import se.linus.firstmod.block.custom.SacriteLampBlock;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -48,6 +51,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.SACRITE_PRESSURE_PLATE);
         blockItem(ModBlocks.SACRITE_FENCE_GATE);
         blockItem(ModBlocks.SACRITE_TRAPDOOR, "_bottom");
+
+        customClickLamp(ModBlocks.SACRITE_LAMP,"sacrite_lamp");
+    }
+
+    private void customClickLamp(RegistryObject<Block> block, String blockName) {
+        getVariantBuilder(block.get()).forAllStates(state -> {
+            if(state.getValue(SacriteLampBlock.CLICKED)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll(blockName + "_on",
+                        ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "block/" + blockName + "_on")))};
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll(blockName,
+                        ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "block/" + blockName)))};
+            }
+        });
+        simpleBlockItem(block.get(), models().cubeAll(blockName + "_on",
+                ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "block/" + blockName + "_on")));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

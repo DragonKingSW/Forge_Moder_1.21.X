@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "firstmod:block/sacrite_lamp"
+    },
+    "clicked=true": {
+      "model": "firstmod:block/sacrite_lamp_on"
+    }
+  }
+}

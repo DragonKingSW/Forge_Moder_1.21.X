@@ -13,6 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import se.linus.firstmod.block.custom.CharstoneBlock;
+import se.linus.firstmod.block.custom.SacriteLampBlock;
 import se.linus.firstmod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -55,6 +56,9 @@ public class ModBlocks {
     public static final RegistryObject<TrapDoorBlock> SACRITE_TRAPDOOR = registerBlock("sacrite_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().noOcclusion()));
 
+    public static final RegistryObject<Block> SACRITE_LAMP = registerBlock("sacrite_lamp",
+            () -> new SacriteLampBlock(BlockBehaviour.Properties.of().strength(3f)
+                    .lightLevel(state -> state.getValue(SacriteLampBlock.CLICKED) ? 50 : 0)));
 
     public static final RegistryObject<Block> INFLAMITE_ORE = registerBlock("inflamite_ore",
             () -> new Block(BlockBehaviour.Properties.of()

@@ -60,6 +60,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.SACRITE_TRAPDOOR.get());
         this.add(ModBlocks.SACRITE_DOOR.get(),
                 block -> createDoorTable(ModBlocks.SACRITE_DOOR.get()));
+
+        dropSelf(ModBlocks.SACRITE_LAMP.get());
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
