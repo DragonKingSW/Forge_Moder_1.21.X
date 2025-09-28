@@ -18,5 +18,12 @@
 
   "block.firstmod.charstone": "Charstone",
 
+  "tooltip.firstmod.charstone.tooltip": "This Block §cCHARRS§r stuff",
+
+  "tooltip.firstmod.flame_wand.shift_down": "Use to §cBurn Blocks§r",
+  "tooltip.firstmod.flame_wand": "Press §eShift§r for more Information",
+
+  "tooltip.firstmod.inflamite": "§cYOUR HAND CRADELS LIVING FIRE§r",
+
   "creativetab.firstmod": "First Mod"
 }
