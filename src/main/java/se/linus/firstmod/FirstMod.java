@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import se.linus.firstmod.block.ModBlocks;
+import se.linus.firstmod.component.ModDataComponentTypes;
 import se.linus.firstmod.item.ModCreativeModeTabs;
 import se.linus.firstmod.item.ModItems;
 
@@ -35,6 +36,8 @@ public class FirstMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModDataComponentTypes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

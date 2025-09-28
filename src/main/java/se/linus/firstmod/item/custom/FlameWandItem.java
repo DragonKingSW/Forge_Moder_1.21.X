@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import se.linus.firstmod.block.ModBlocks;
+import se.linus.firstmod.component.ModDataComponentTypes;
 import se.linus.firstmod.util.ModTags;
 
 import java.util.List;
@@ -43,6 +44,8 @@ public class FlameWandItem extends Item {
                         item -> pContext.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
                 level.playSound(null, pContext.getClickedPos(), SoundEvents.FIRECHARGE_USE, SoundSource.BLOCKS);
+
+                pContext.getItemInHand().set(ModDataComponentTypes.COORDINATES.get(), pContext.getClickedPos());
             }
         }
 
@@ -59,6 +62,10 @@ public class FlameWandItem extends Item {
             pTooltipComponents.add(Component.translatable("tooltip.firstmod.flame_wand.shift_down"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.firstmod.flame_wand"));
+        }
+
+        if(pStack.get(ModDataComponentTypes.COORDINATES.get()) != null) {
+            pTooltipComponents.add(Component.literal("§cLast Block changed at: " + pStack.get(ModDataComponentTypes.COORDINATES.get()) + "§r"));
         }
 
         super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
