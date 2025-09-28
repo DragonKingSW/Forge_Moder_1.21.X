@@ -16,24 +16,15 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import se.linus.firstmod.block.ModBlocks;
+import se.linus.firstmod.util.ModTags;
 
 import java.util.List;
 import java.util.Map;
 
 
 public class FlameWandItem extends Item {
-    private static final Map<Block, Block> FLAME_MAP =
-            Map.of(
-                    Blocks.OAK_LOG, ModBlocks.FIREBARK_BLOCK.get(),
-                    Blocks.ACACIA_LOG, ModBlocks.FIREBARK_BLOCK.get(),
-                    Blocks.BIRCH_LOG, ModBlocks.FIREBARK_BLOCK.get(),
-                    Blocks.CHERRY_LOG, ModBlocks.FIREBARK_BLOCK.get(),
-                    Blocks.DARK_OAK_LOG, ModBlocks.FIREBARK_BLOCK.get(),
-                    Blocks.JUNGLE_LOG, ModBlocks.FIREBARK_BLOCK.get(),
-                    Blocks.MANGROVE_LOG, ModBlocks.FIREBARK_BLOCK.get(),
-                    Blocks.SPRUCE_LOG, ModBlocks.FIREBARK_BLOCK.get()
-            );
 
     public FlameWandItem(Properties pProperties) {
         super(pProperties);
@@ -44,9 +35,9 @@ public class FlameWandItem extends Item {
         Level level = pContext.getLevel();
         Block clickedBlock = level.getBlockState(pContext.getClickedPos()).getBlock();
 
-        if(FLAME_MAP.containsKey(clickedBlock)) {
+        if(isValidBlock(clickedBlock.defaultBlockState())) {
             if(!level.isClientSide) {
-                level.setBlockAndUpdate(pContext.getClickedPos(), FLAME_MAP.get(clickedBlock).defaultBlockState());
+                level.setBlockAndUpdate(pContext.getClickedPos(), ModBlocks.FIREBARK_BLOCK.get().defaultBlockState());
                 
                 pContext.getItemInHand().hurtAndBreak(1, ((ServerLevel) level), ((ServerPlayer) pContext.getPlayer()),
                         item -> pContext.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
@@ -56,6 +47,10 @@ public class FlameWandItem extends Item {
         }
 
         return InteractionResult.SUCCESS;
+    }
+
+    private boolean isValidBlock(BlockState block) {
+        return block.is(ModTags.Blocks.BURNABLE_BLOCKS);
     }
 
     @Override

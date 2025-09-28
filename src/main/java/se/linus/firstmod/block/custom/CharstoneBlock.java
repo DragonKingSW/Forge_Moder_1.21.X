@@ -13,6 +13,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import se.linus.firstmod.item.ModItems;
+import se.linus.firstmod.util.ModTags;
 
 import java.util.List;
 
@@ -42,12 +43,16 @@ public class CharstoneBlock extends Block {
                         pLevel.addFreshEntity(leftoverEntity);
                     }
                 }
-            } else if (itemEntity.getItem().getItem() == Items.ROTTEN_FLESH) {
+            } else if (isValidItem(itemEntity.getItem())) {
                 itemEntity.setItem(new ItemStack(ModItems.CHARRED_FLESH.get(), itemEntity.getItem().getCount()));
             }
         }
 
         super.stepOn(pLevel, pPos, pState, pEntity);
+    }
+
+    private boolean isValidItem(ItemStack item) {
+        return item.is(ModTags.Items.CHARRABLE_FLESH_ITEMS);
     }
 
     @Override
