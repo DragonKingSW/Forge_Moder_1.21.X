@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "sacrite",
+  "key": {
+    "#": {
+      "item": "firstmod:sacrite"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "firstmod:sacrite_stairs"
+  }
+}

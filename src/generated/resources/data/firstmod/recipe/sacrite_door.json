@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "sacrite",
+  "key": {
+    "#": {
+      "item": "firstmod:sacrite"
+    }
+  },
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 3,
+    "id": "firstmod:sacrite_door"
+  }
+}

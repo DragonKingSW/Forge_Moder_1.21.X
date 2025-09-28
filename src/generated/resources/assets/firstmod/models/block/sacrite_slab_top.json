@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "firstmod:block/sacrite_block",
+    "side": "firstmod:block/sacrite_block",
+    "top": "firstmod:block/sacrite_block"
+  }
+}

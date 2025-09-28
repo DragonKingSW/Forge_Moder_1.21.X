@@ -2,11 +2,11 @@ package se.linus.firstmod.block;
 
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import se.linus.firstmod.FirstMod;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -30,6 +30,30 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEEPSLATE_SACRITE_ORE = registerBlock("deepslate_sacrite_ore",
             () -> new DropExperienceBlock(UniformInt.of(3,5), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<StairBlock> SACRITE_STAIRS = registerBlock("sacrite_stairs",
+            () -> new StairBlock(ModBlocks.SACRITE_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<SlabBlock> SACRITE_SLAB = registerBlock("sacrite_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<PressurePlateBlock> SACRITE_PRESSURE_PLATE = registerBlock("sacrite_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<ButtonBlock> SACRITE_BUTTON = registerBlock("sacrite_button",
+            () -> new ButtonBlock(BlockSetType.IRON,1, BlockBehaviour.Properties.of().strength(3f)
+                    .requiresCorrectToolForDrops().noCollission()));
+
+    public static final RegistryObject<FenceBlock> SACRITE_FENCE = registerBlock("sacrite_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<FenceGateBlock> SACRITE_FENCE_GATE = registerBlock("sacrite_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<WallBlock> SACRITE_WALL = registerBlock("sacrite_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<DoorBlock> SACRITE_DOOR = registerBlock("sacrite_door",
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().noOcclusion()));
+    public static final RegistryObject<TrapDoorBlock> SACRITE_TRAPDOOR = registerBlock("sacrite_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().noOcclusion()));
 
 
     public static final RegistryObject<Block> INFLAMITE_ORE = registerBlock("inflamite_ore",
