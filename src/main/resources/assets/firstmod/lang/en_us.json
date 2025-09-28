@@ -18,18 +18,18 @@
 
   "block.firstmod.charstone": "Charstone",
 
-  "block.tutorialmod.sacrite_stairs": "Sacrite Stairs",
-  "block.tutorialmod.sacrite_slab": "Sacrite Slab",
+  "block.firstmod.sacrite_stairs": "Sacrite Stairs",
+  "block.firstmod.sacrite_slab": "Sacrite Slab",
 
-  "block.tutorialmod.sacrite_button": "Sacrite Button",
-  "block.tutorialmod.sacrite_pressure_plate": "Sacrite Pressure Plate",
+  "block.firstmod.sacrite_button": "Sacrite Button",
+  "block.firstmod.sacrite_pressure_plate": "Sacrite Pressure Plate",
 
-  "block.tutorialmod.sacrite_fence": "Sacrite Fence",
-  "block.tutorialmod.sacrite_fence_gate": "Sacrite Fence Gate",
-  "block.tutorialmod.sacrite_wall": "Sacrite Wall",
+  "block.firstmod.sacrite_fence": "Sacrite Fence",
+  "block.firstmod.sacrite_fence_gate": "Sacrite Fence Gate",
+  "block.firstmod.sacrite_wall": "Sacrite Wall",
 
-  "block.tutorialmod.sacrite_door": "Sacrite Door",
-  "block.tutorialmod.sacrite_trapdoor": "Sacrite Trapdoor",
+  "block.firstmod.sacrite_door": "Sacrite Door",
+  "block.firstmod.sacrite_trapdoor": "Sacrite Trapdoor",
 
   "tooltip.firstmod.charstone.tooltip": "This Block §cCHARRS§r stuff",
 

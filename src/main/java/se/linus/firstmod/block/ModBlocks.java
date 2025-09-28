@@ -40,7 +40,7 @@ public class ModBlocks {
     public static final RegistryObject<PressurePlateBlock> SACRITE_PRESSURE_PLATE = registerBlock("sacrite_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
     public static final RegistryObject<ButtonBlock> SACRITE_BUTTON = registerBlock("sacrite_button",
-            () -> new ButtonBlock(BlockSetType.IRON,1, BlockBehaviour.Properties.of().strength(3f)
+            () -> new ButtonBlock(BlockSetType.IRON,20, BlockBehaviour.Properties.of().strength(3f)
                     .requiresCorrectToolForDrops().noCollission()));
 
     public static final RegistryObject<FenceBlock> SACRITE_FENCE = registerBlock("sacrite_fence",

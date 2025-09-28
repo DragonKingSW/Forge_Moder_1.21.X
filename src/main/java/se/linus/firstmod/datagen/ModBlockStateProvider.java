@@ -55,12 +55,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void blockItem(RegistryObject<? extends Block> blockRegistryObject) {
-        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("tutorialmod:block/" +
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("firstmod:block/" +
                 ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
 
     private void blockItem(RegistryObject<? extends Block> blockRegistryObject, String appendix) {
-        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("tutorialmod:block/" +
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("firstmod:block/" +
                 ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
     }
 }
