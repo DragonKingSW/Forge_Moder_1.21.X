@@ -65,7 +65,7 @@ public class FlameWandItem extends Item {
         }
 
         if(pStack.get(ModDataComponentTypes.COORDINATES.get()) != null) {
-            pTooltipComponents.add(Component.literal("§cLast Block changed at: " + pStack.get(ModDataComponentTypes.COORDINATES.get()) + "§r"));
+            pTooltipComponents.add(Component.literal("§bLast Block changed at: " + pStack.get(ModDataComponentTypes.COORDINATES.get()) + "§r"));
         }
 
         super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);

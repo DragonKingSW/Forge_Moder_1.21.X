@@ -2,6 +2,7 @@ package se.linus.firstmod.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -33,6 +34,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.SACRITE_WALL, ModBlocks.SACRITE_BLOCK);
 
         simpleBlockItem(ModBlocks.SACRITE_DOOR);
+
+        handheldItem(ModItems.SACRITE_SWORD);
+        handheldItem(ModItems.SACRITE_PICKAXE);
+        handheldItem(ModItems.SACRITE_SHOVEL);
+        handheldItem(ModItems.SACRITE_AXE);
+        handheldItem(ModItems.SACRITE_HOE);
+    }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID,"item/" + item.getId().getPath()));
     }
 
     public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {

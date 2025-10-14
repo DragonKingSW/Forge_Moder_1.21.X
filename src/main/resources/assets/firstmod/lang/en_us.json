@@ -2,6 +2,12 @@
   "item.firstmod.sacrite": "Sacrite Gem",
   "item.firstmod.raw_sacrite": "Raw Sacrite",
 
+  "item.firstmod.sacrite_sword": "Sacrite Sword",
+  "item.firstmod.sacrite_pickaxe": "Sacrite Pickaxe",
+  "item.firstmod.sacrite_shovel": "Sacrite Shovel",
+  "item.firstmod.sacrite_axe": "Sacrite Axe",
+  "item.firstmod.sacrite_hoe": "Sacrite Hoe",
+
   "item.firstmod.inflamite": "Inflamite",
   "item.firstmod.flame_wand": "Flame Wand",
   "item.firstmod.firebark": "Firebark",

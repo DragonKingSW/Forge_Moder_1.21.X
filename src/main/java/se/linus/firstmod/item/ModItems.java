@@ -1,10 +1,8 @@
 package se.linus.firstmod.item;
 
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import se.linus.firstmod.FirstMod;
-import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -35,6 +33,22 @@ public class ModItems {
             () -> new FlameWandItem(new Item.Properties().durability(32)));
     public static final RegistryObject<Item> FIREBARK = ITEMS.register("firebark",
             () -> new FuelItem(new Item.Properties(), 10));
+
+    public static final RegistryObject<Item> SACRITE_SWORD =ITEMS.register("sacrite_sword",
+            () -> new SwordItem(ModToolTiers.SACRITE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.SACRITE,3,-2.4f))));
+    public static final RegistryObject<Item> SACRITE_PICKAXE =ITEMS.register("sacrite_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.SACRITE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.SACRITE,1,-2.8f))));
+    public static final RegistryObject<Item> SACRITE_SHOVEL =ITEMS.register("sacrite_shovel",
+            () -> new ShovelItem(ModToolTiers.SACRITE, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.SACRITE,1.5f,-3.0f))));
+    public static final RegistryObject<Item> SACRITE_AXE =ITEMS.register("sacrite_axe",
+            () -> new AxeItem(ModToolTiers.SACRITE, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.SACRITE,6,-3.2f))));
+    public static final RegistryObject<Item> SACRITE_HOE =ITEMS.register("sacrite_hoe",
+            () -> new HoeItem(ModToolTiers.SACRITE, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(ModToolTiers.SACRITE,0,-3.0f))));
 
     public static final RegistryObject<Item> CHARRED_FLESH = ITEMS.register("charred_flesh",
             () -> new Item(new Item.Properties().food(ModFoodProperties.CHARRED_FLESH)));

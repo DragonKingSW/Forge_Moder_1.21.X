@@ -10,6 +10,8 @@ import se.linus.firstmod.FirstMod;
 
 public class ModTags {
     public static class Blocks {
+        public static final TagKey<Block> NEEDS_SACRITE_TOOL = createTag("needs_sacrite_tool");
+        public static final TagKey<Block> INCORRECT_FOR_SACRITE_TOOL = createTag("incorrect_for_sacrite_tool");
         public static final TagKey<Block> BURNABLE_BLOCKS = createTag("burnable_blocks");
 
         private static TagKey<Block> createTag(String name) {

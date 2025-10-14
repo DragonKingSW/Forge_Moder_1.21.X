@@ -48,9 +48,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.DEEPSLATE_SACRITE_ORE.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.CHARSTONE.get());
+
+        tag(ModTags.Blocks.NEEDS_SACRITE_TOOL)
                 .add(ModBlocks.INFLAMITE_ORE.get())
                 .add(ModBlocks.DEEPSLATE_INFLAMITE_ORE.get())
-                .add(ModBlocks.CHARSTONE.get());
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_SACRITE_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .remove(ModTags.Blocks.NEEDS_SACRITE_TOOL);
 
         tag(BlockTags.FENCES).add(ModBlocks.SACRITE_FENCE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.SACRITE_FENCE_GATE.get());

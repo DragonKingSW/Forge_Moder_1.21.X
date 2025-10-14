@@ -21,6 +21,12 @@ public class ModCreativeModeTabs {
                        output.accept(ModItems.SACRITE.get());
                        output.accept(ModItems.RAW_SACRITE.get());
 
+                       output.accept(ModItems.SACRITE_SWORD.get());
+                       output.accept(ModItems.SACRITE_PICKAXE.get());
+                       output.accept(ModItems.SACRITE_SHOVEL.get());
+                       output.accept(ModItems.SACRITE_AXE.get());
+                       output.accept(ModItems.SACRITE_HOE.get());
+
                        output.accept(ModItems.INFLAMITE.get());
                        output.accept(ModItems.FLAME_WAND.get());
                        output.accept(ModItems.FIREBARK.get());
